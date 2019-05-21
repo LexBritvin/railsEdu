@@ -55,3 +55,4 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'britvin_view_tool', git: 'https://github.com/LexBritvin/britvin_view_tool'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
