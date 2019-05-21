@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/LexBritvin/britvin_view_tool
+  revision: 4db4632cb4d51383ce1a4139e69c95ab39ccc76f
+  specs:
+    britvin_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,6 +195,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.3.1)
+  britvin_view_tool!
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.6, >= 4.6.2)

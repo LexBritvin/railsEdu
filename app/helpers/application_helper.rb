@@ -16,4 +16,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    BritvinViewTool::Renderer.copyright 'Aleksandr Britvin', 'All rights reserved'
+  end
+
 end
