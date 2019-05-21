@@ -1,5 +1,8 @@
 {
   "name": "RailsEdu",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {}
 }
