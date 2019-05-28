@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= @page_title %></title>
-    <%= csrf_meta_tags %>
+<head>
 
-    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <title><%= @page_title %></title>
+  <%= csrf_meta_tags %>
 
-    <%= login_helper %>
+  <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+<div class="container">
+  <%= render "shared/blog_nav" %>
+  <%= render "shared/blog_header" %>
+</div>
+
+<main role="main" class="container">
+  <div class="row">
 
     <%= yield %>
 
-    <%= render "shared/nav", location: 'bottom' %>
+    <%= render "shared/blog_sidebar" %>
 
     <%= source_helper("blog") %>
-  </body>
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->
+
+<%= render "shared/blog_footer" %>
+
+</body>
 </html>
