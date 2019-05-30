@@ -20,4 +20,43 @@ module ApplicationHelper
     BritvinViewTool::Renderer.copyright 'Aleksandr Britvin', 'All rights reserved'
   end
 
+  def nav_items
+    [
+        {
+            url: root_path,
+            title: "Home",
+        },
+        {
+            url: about_path,
+            title: "About",
+        },
+        {
+            url: contact_path,
+            title: "Contact",
+        },
+        {
+            url: blogs_path,
+            title: "Blog",
+        },
+        {
+            url: portfolios_path,
+            title: "Portfolio",
+        },
+    ]
+  end
+
+  def nav_helper(style = '', tag_type = nil)
+    nav_links = ""
+    nav_items.each do |item|
+      nav_links << "<#{tag_type}>" unless tag_type.nil? || tag_type.empty?
+      nav_links << link_to(item[:title], item[:url], class: "#{style} #{active? item[:url]}")
+      nav_links << "</#{tag_type}>" unless tag_type.nil? || tag_type.empty?
+    end
+    nav_links.html_safe
+  end
+
+  def active?(path)
+    "active" if current_page? path
+  end
+
 end
