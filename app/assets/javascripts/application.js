@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require html5sortable/dist/html5sortable
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks

@@ -2,7 +2,9 @@
   "name": "RailsEdu",
   "private": true,
   "dependencies": {
-    "jquery": "^3.4.1"
+    "html5sortable": "^0.9.16",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1"
   },
   "devDependencies": {}
 }

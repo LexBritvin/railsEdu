@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+html5sortable@^0.9.16:
+  version "0.9.16"
+  resolved "https://registry.yarnpkg.com/html5sortable/-/html5sortable-0.9.16.tgz#2ef9eef996d9e6ef67a89c56878aef083b72e56c"
+  integrity sha512-GjCFl7w+Z6bQNs6lU5fhPqLoC5aRbFbQtL9rgqGR3Fs0GCRCrGjoRusZkhWaQpMr4eN25BlkviYA2nH+hFnDoA==
+
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+  integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
+
 jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
