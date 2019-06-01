@@ -12,22 +12,25 @@ set_positions = ->
 
 ready = ->
   set_positions()
-  sortable('.sortable', {
+  items = sortable('.sortable', {
     forcePlaceholderSize: true,
     placeholderClass: 'col-md-4',
-  })[0].addEventListener 'sortupdate', (e) ->
-    updated_order = []
-    set_positions()
-    $('.portfolio-item-card').each (i) ->
-      updated_order.push
-        id: $(this).data('id')
-        position: i + 1
+  })
+  if items.length
+    items[0].addEventListener 'sortupdate', (e) ->
+      updated_order = []
+      set_positions()
+      $('.portfolio-item-card').each (i) ->
+        updated_order.push
+          id: $(this).data('id')
+          position: i + 1
+        return
+      $.ajax
+        type: 'PUT'
+        url: '/portfolios/sort'
+        data:
+          order: updated_order
       return
-    $.ajax
-      type: 'PUT'
-      url: '/portfolios/sort'
-      data: order: updated_order
-    return
   return
 
 $(document).ready ready
