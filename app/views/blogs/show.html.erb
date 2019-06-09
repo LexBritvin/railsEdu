@@ -2,9 +2,15 @@
   <h2 class="pb-4 mb-4 font-italic border-bottom">
     <%= @blog.title %>
   </h2>
-  <p>
-    <%= @blog.topic.title %>
-  </p>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+      <li class="breadcrumb-item"><%= link_to @blog.topic.title, @blog.topic %></li>
+      <li class="breadcrumb-item active" aria-current="page"><%= @blog.title %></li>
+    </ol>
+
+  </nav>
 
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
 
