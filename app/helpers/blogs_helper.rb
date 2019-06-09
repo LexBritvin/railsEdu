@@ -3,6 +3,12 @@ module BlogsHelper
     image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 40
   end
 
+  def blog_status_color(blog)
+    if blog.draft?
+      'color: red;'
+    end
+  end
+
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
       CodeRay.scan(code, language).div
