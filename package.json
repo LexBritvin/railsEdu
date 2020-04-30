@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "html5sortable": "^0.9.16",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui": "^1.12.1"
   },
   "devDependencies": {}
